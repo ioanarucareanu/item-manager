@@ -21,13 +21,13 @@
       <!--Body content-->
 
       <ul class="phones">
-        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+        <li ng-repeat="item in $ctrl.items | filter:$ctrl.query | orderBy:$ctrl.orderProp"
             class="thumbnail phone-list-item">
-          <a href="#!/phones/{{phone.id}}" class="thumb">
-            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+          <a href="#!/phones/{{item.id}}" class="thumb">
+            <img ng-src="{{item.imageUrl}}" alt="{{item.title}}" />
           </a>
-          <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
+          <a href="#!/phones/{{item.id}}">{{item.title}}</a>
+          <p>{{item.description}}</p>
         </li>
       </ul>
 

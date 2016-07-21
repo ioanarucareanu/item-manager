@@ -9,7 +9,7 @@
           console.log('in config');
           $routeProvider.
             when('/phones', {
-              template: '<phone-list></phone-list>'
+              template: '<items-list></items-list>'
             }).
             when('/phones/:phoneId', {
               template: '<phone-detail></phone-detail>'
