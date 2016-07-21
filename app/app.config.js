@@ -6,7 +6,6 @@
       config(['$locationProvider' ,'$routeProvider',
         function config($locationProvider, $routeProvider) {
           $locationProvider.hashPrefix('!');
-          console.log('in config');
           $routeProvider.
             when('/phones', {
               template: '<items-list></items-list>'

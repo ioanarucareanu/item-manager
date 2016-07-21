@@ -11,8 +11,7 @@
       <p>
         Sort by:
         <select ng-model="$ctrl.orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
+          <option ng-repeat="option in $ctrl.orderOptions" ng-model="$ctrl.orderProp">{{option}}</option>
         </select>
       </p>
 

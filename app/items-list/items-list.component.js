@@ -6,13 +6,14 @@ angular.
   component('itemsList', {
     templateUrl: 'items-list/items-list.template.html',
     controller: ['Items', '$log',
-      function PhoneListController(Items, $log) {
+      function ItemsListController(Items, $log) {
         var self = this;
         Items.query(function(data) {
           self.items = data.items;
           $log.debug(self.items);
         });
-        self.orderProp = 'age';
+        self.orderProp = 'title';
+        self.orderOptions = ['title', 'description', 'price', 'email'];
       }
     ]
   });
