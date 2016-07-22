@@ -5,8 +5,8 @@ angular.
   module('itemsList', ['angularUtils.directives.dirPagination']).
   component('itemsList', {
     templateUrl: 'items-list/items-list.template.html',
-    controller: ['Items', '$log',
-      function ItemsListController(Items, $log) {
+    controller: ['Items', 'Favorites', '$log',
+      function ItemsListController(Items, Favorites, $log) {
         var self = this;
         Items.query(function(data) {
           self.items = data.items;
