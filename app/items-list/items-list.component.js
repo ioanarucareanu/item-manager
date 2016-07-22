@@ -2,7 +2,7 @@
 
 // Register `phoneList` component, along with its associated controller and template
 angular.
-  module('itemsList').
+  module('itemsList', ['angularUtils.directives.dirPagination']).
   component('itemsList', {
     templateUrl: 'items-list/items-list.template.html',
     controller: ['Items', '$log',
