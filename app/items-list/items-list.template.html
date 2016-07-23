@@ -20,14 +20,15 @@
       <!--Body content-->
 
       <ul class="phones">
-        <li dir-paginate="item in $ctrl.items | itemsPerPage: 5 | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail phone-list-item">
+        <li dir-paginate="item in $ctrl.items | itemsPerPage: 5 | filter:$ctrl.query" class="thumbnail phone-list-item">
+          <!--orderBy:$ctrl.orderProp-->
           <a href="#!/phones/{{item.id}}" class="thumb">
             <img ng-src="{{item.imageUrl}}" alt="{{item.title}}" />
           </a>
           <a href="#!/phones/{{item.id}}">{{item.title}}</a>
           <p>{{item.description}}</p>
-          <p>{{item.price}}</p>
-          <img class="favorite" src="/img/empty_heart.png"/>
+          <p>{{item.price}}</p> {{item.favorite}}
+          <span class="favorite" ng-class="item.favorite ? 'favorite-on' : 'favorite-off'" ng-click="$ctrl.toggle(item)"></span>
         </li>
       </ul>
 
