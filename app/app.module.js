@@ -4,10 +4,11 @@
 
   angular.module('itemManager', [
     'ngAnimate',
-    'ngRoute',
+    'ui.router',
     'core',
-    'itemsList',
-    'favoritesModal'
+    'itemsDirectives',
+    'itemsList'
+    // 'favoritesModal'
   ]);
 
 })();

@@ -2,7 +2,7 @@
 
 angular.
   module('core.items').
-  factory('Items', ['$resource',
+  factory('ItemsService', ['$resource',
     function($resource) {
       return $resource('data/items.json', {}, {
         query: {

@@ -15,12 +15,11 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
-    <!--<script src="bower_components/angular-ui-router-uib-modal/angular-ui-router-uib-modal.js"></script>-->
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
     <script src="bower_components/angular.uuid2/dist/angular-uuid2.js"></script>
+    <script src="bower_components/angular-modal-service/dst/angular-modal-service.js"></script>
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
     <script src="app.animations.js"></script>
@@ -28,16 +27,16 @@
     <script src="core/checkmark/checkmark.filter.js"></script>
     <script src="core/items/items.module.js"></script>
     <script src="core/items/items.service.js"></script>
-    <script src="items-list/items-list.module.js"></script>
-    <script src="items-list/items-list.component.js"></script>
+    <script src="directives/directives.module.js"></script>
+    <script src="directives/item.directive.controller.js"></script>
     <script src="favorites-modal/favorites-modal.module.js"></script>
-    <script src="favorites-modal/favorites-modal.component.js"></script>
+    <script src="favorites-modal/favorites-modal.controller.js"></script>
+    <script src="items-list/items-list.module.js"></script>
+    <script src="items-list/items-list.controller.js"></script>
   </head>
   <body>
 
-    <div class="view-container">
-      <div ng-view class="view-frame"></div>
-    </div>
+    <div ui-view></div>
 
   </body>
 </html>

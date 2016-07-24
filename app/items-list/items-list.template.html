@@ -1,95 +1,75 @@
+<!--<p>Items List Template</p>-->
+
+<!--{{test}}-->
+
+<!--<button style="font-size:2.0em;" class="glyphicon glyphicon-th-list" ng-click="showFavorites()">-->
+
+<!--</button>-->
+
 <div class="container">
-  <div class="row">
-    <div class="col-xs-6">
-      <div class="pull-left">
-        <!--Sidebar content-->
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="pull-left">
+                <!--Sidebar content-->
 
-        <p>
-          Search:
-          <input ng-model="$ctrl.query" />
-        </p>
+                <p>
+                    Search:
+                    <input ng-model="query" />
+                </p>
 
-        <p>
-          Sort by:
-          <select ng-model="$ctrl.orderProp">
-            <option ng-repeat="option in $ctrl.orderOptions" ng-model="$ctrl.orderProp">{{option}}</option>
-          </select>
-        </p>
-      </div>
-    </div>
-    <div class="col-xs-6">
-      <div class="pull-right">
-        <button style="font-size:2.0em;" class="glyphicon glyphicon-th-list" ng-click="$ctrl.showFavorites()">
-
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="phones">
-        <li dir-paginate="item in $ctrl.items | itemsPerPage: 5 | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail phone-list-item">
-          <div class="itemBoxContainer col-sm-4">
-            <div class='itembox'>
-              <!-- phone design -->
-              <div class="image hidden-sm hidden-md hidden-lg" style="background: url('../data/{{item.image}}') no-repeat;background-size: cover;background-position: center center;">
-
-              </div>
-              <!-- end phone design -->
-
-              <div class='byline'>
-                <div class='date'>{{item.price}}</div>
-              </div>
-              <div class='title'>{{item.title}}</div>
-              <div class='description'>
-
-                <div class="image hidden-xs" style="background: url('../data/{{item.image}}') no-repeat;background-size: cover;background-position: center center;"></div>
-                <h9>{{item.description}}</h9>
-                <br /> <br />
-                <h9></h9>
-              </div>
-              <div class="itemboxGradient"></div>
+                <p>
+                    Sort by:
+                    <select ng-model="orderProp">
+                        <option ng-repeat="option in orderOptions" ng-model="orderProp">{{option}}</option>
+                    </select>
+                </p>
             </div>
-            <span class="favorite media-right" ng-class="item.favorite ? 'favorite-on' : 'favorite-off'" ng-click="$ctrl.toggle(item)"></span>
-          </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="pull-right">
+                <button style="font-size:2.0em;" class="glyphicon glyphicon-th-list" ng-click="showFavorites()">
 
-        </li>
-      </ul>
-
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <dir-pagination-controls></dir-pagination-controls>
-  </div>
+    <div class="row">
+        <div class="col-md-10">
+            <!--Body content-->
 
-  <div ui-view="modal" autoscroll="false"></div>
-  <!--Bootstrap popup test -->
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+            <ul class="phones">
+                <li dir-paginate="item in items | itemsPerPage: 5 | filter:query | orderBy:orderProp" class="thumbnail phone-list-item">
+                    <!--<div class="itemBoxContainer col-sm-4">-->
+                        <!--<div class='itembox'>-->
+                            <!--&lt;!&ndash; phone design &ndash;&gt;-->
+                            <!--<div class="image hidden-sm hidden-md hidden-lg" style="background: url('../data/{{item.image}}') no-repeat;background-size: cover;background-position: center center;">-->
 
-  <!-- Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+                            <!--</div>-->
+                            <!--&lt;!&ndash; end phone design &ndash;&gt;-->
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+                            <!--<div class='byline'>-->
+                                <!--<div class='date'>{{item.price}}</div>-->
+                            <!--</div>-->
+                            <!--<div class='title'>{{item.title}}</div>-->
+                            <!--<div class='description'>-->
+
+                                <!--<div class="image hidden-xs" style="background: url('../data/{{item.image}}') no-repeat;background-size: cover;background-position: center center;"></div>-->
+                                <!--<h9>{{item.description}}</h9>-->
+                                <!--<br /> <br />-->
+                                <!--<h9></h9>-->
+                            <!--</div>-->
+                            <!--<div class="itemboxGradient"></div>-->
+                        <!--</div>-->
+                        <!--<span class="favorite media-right" ng-class="item.favorite ? 'favorite-on' : 'favorite-off'" ng-click="toggle(item)"></span>-->
+                    <!--</div>-->
+                    <item-row />
+                </li>
+            </ul>
+
         </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
     </div>
-  </div>
-
-
+    <div class="row">
+        <dir-pagination-controls></dir-pagination-controls>
+    </div>
 
 </div>
