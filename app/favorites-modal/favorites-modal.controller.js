@@ -7,5 +7,8 @@ angular.
 
 function FavoritesModalController($log, $scope, ItemsService) {
     $log.debug('in Favorites Controller');
-    $scope.items = ItemsService.query();
+    ItemsService.query(function(data) {
+        $scope.items = data.items;
+        $log.debug($scope.items);
+    });
 }

@@ -2,5 +2,5 @@
 
 // Define the `favoritesModal` module
 angular.module('favoritesModal',
-    ['core.items']
+    ['core.items', 'itemsDirectives']
 );

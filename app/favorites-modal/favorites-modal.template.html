@@ -8,9 +8,14 @@
             </div>
             <div class="modal-body">
                 <p>Logs will appear below:</p>
+                <ul class="phones">
+                    <li ng-repeat="item in items" class="thumbnail phone-list-item">
+                        <item-row title="item.title"/>
+                    </li>
+                </ul>
 
                 <div class="well" style="height: 50%; overflow: scroll;">
-                    LALALALALALAL
+
                 </div>
 
             </div>

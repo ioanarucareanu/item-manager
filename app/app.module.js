@@ -6,7 +6,6 @@
     'ngAnimate',
     'ui.router',
     'core',
-    'itemsDirectives',
     'itemsList'
     // 'favoritesModal'
   ]);
