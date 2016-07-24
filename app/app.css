@@ -98,7 +98,3 @@ h1 {
 .favorite-off {
   background-image: url('/img/empty_heart.png');
 }
-
-favorites-modal {
-  border: 5px solid #000;
-}

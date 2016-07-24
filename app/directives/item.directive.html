@@ -1,2 +1,23 @@
-<p>One item. Patience</p>
-{{title}}
+<div class="itemBoxContainer col-sm-4">
+    <div class='itembox'>
+    <!-- phone design -->
+        <div class="image hidden-sm hidden-md hidden-lg" style="background: url('../data/{{image}}') no-repeat;background-size: cover;background-position: center center;">
+
+    </div>
+    <!-- end phone design -->
+
+    <div class='byline'>
+        <div class='date'>{{price}}</div>
+    </div>
+    <div class='title'>{{title}}</div>
+    <div class='description'>
+
+        <div class="image hidden-xs" style="background: url('../data/{{image}}') no-repeat;background-size: cover;background-position: center center;"></div>
+        <h9>{{description}}</h9>
+        <br /> <br />
+        <h9></h9>
+    </div>
+    <div class="itemboxGradient"></div>
+    </div>
+    <!--<span class="favorite media-right" ng-class="favorite ? 'favorite-on' : 'favorite-off'" ng-click="toggle(id)"></span>-->
+</div>

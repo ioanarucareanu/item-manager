@@ -7,7 +7,6 @@
     'ui.router',
     'core',
     'itemsList'
-    // 'favoritesModal'
   ]);
 
 })();

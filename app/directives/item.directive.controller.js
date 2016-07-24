@@ -7,7 +7,13 @@ function itemRow($log) {
     var directive = {
         restrict: 'EA',
         scope: {
-            title: '='
+            id: '=',
+            title: '=',
+            description: '=',
+            price: '=',
+            email: '=',
+            image: '=',
+            favorite: '='
         },
 
         templateUrl: 'directives/item.directive.html',

@@ -9,8 +9,8 @@
             <div class="modal-body">
                 <p>Logs will appear below:</p>
                 <ul class="phones">
-                    <li ng-repeat="item in items" class="thumbnail phone-list-item">
-                        <item-row title="item.title"/>
+                    <li ng-repeat="item in items track by $index" class="thumbnail phone-list-item">
+                        <item-row id="item.id" title="item.title" image="item.image" />
                     </li>
                 </ul>
 
