@@ -4,13 +4,16 @@
             <div class="modal-header">
                 <button type="button" class="close" ng-click="close()" data-dismiss="modal"
                         aria-hidden="true">&times;</button>
-                <h4 class="modal-title" ng-bind="title"></h4>
+                <h4 class="modal-title">Favorites</h4>
             </div>
             <div class="modal-body">
-                <p>Logs will appear below:</p>
+                <p>
+                    Search:
+                    <input ng-model="query" />
+                </p>
                 <ul class="phones">
-                    <li ng-repeat="item in items track by $index" class="thumbnail phone-list-item">
-                        <item-row id="item.id" title="item.title" image="item.image" />
+                    <li ng-repeat="item in items | filter: {'title' : query} " class="thumbnail phone-list-item">
+                        <item-row id="item.id" title="item.title" image="item.image"></item-row>
                     </li>
                 </ul>
 
@@ -20,7 +23,6 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" ng-click="download()" class="btn btn-danger">Download</button>
                 <button type="button" ng-click="close()" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
