@@ -6,8 +6,8 @@
     'ngAnimate',
     'ngRoute',
     'core',
-    'phoneDetail',
-    'itemsList'
+    'itemsList',
+    'favoritesModal'
   ]);
 
 })();

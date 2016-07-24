@@ -14,8 +14,7 @@ h1 {
 
 .phones li {
   clear: both;
-  height: 115px;
-  padding-top: 15px;
+  height: 150px;
 }
 
 .thumb {
@@ -28,6 +27,60 @@ h1 {
 
 .phones .thumbnail {
   position: relative;
+}
+
+/* Thumbnail content */
+
+.itemBoxContainer {
+  overflow: hidden;
+}
+
+.itemBoxContainer a {
+  height:100%;
+  position: relative;
+  z-index: 9;
+}
+
+.itembox {
+  padding: 30px 0;
+  position: relative;
+}
+
+.itembox .title {
+  font-size: 22px;
+  color: #222;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.itembox .byline {
+  color: #999;
+  font-size: 0.9em;
+}
+
+.itembox .image {
+  float: left;
+  margin: 0 20px 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.itembox .image {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 100%;
+  }
+}
+
+/* End thumbnail content */
+
+.item-image {
+  width: 140px;
+  height: 140px;
 }
 
 .thumbnail .favorite {
@@ -46,68 +99,6 @@ h1 {
   background-image: url('/img/empty_heart.png');
 }
 
-/* View: Phone detail */
-.phone {
-  background-color: white;
-  display: none;
-  float: left;
-  height: 400px;
-  margin-bottom: 2em;
-  margin-right: 3em;
-  padding: 2em;
-  width: 400px;
-}
-
-.phone:first-child {
-  display: block;
-}
-
-.phone-images {
-  background-color: white;
-  float: left;
-  height: 450px;
-  overflow: hidden;
-  position: relative;
-  width: 450px;
-}
-
-.phone-thumbs {
-  list-style: none;
-  margin: 0;
-}
-
-.phone-thumbs img {
-  height: 100px;
-  padding: 1em;
-  width: 100px;
-}
-
-.phone-thumbs li {
-  background-color: white;
-  border: 1px solid black;
-  cursor: pointer;
-  display: inline-block;
-  margin: 1em;
-}
-
-.specs {
-  clear: both;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.specs dt {
-  font-weight: bold;
-}
-
-.specs > li {
-  display: inline-block;
-  vertical-align: top;
-  width: 200px;
-}
-
-.specs > li > span {
-  font-size: 1.2em;
-  font-weight: bold;
+favorites-modal {
+  border: 5px solid #000;
 }

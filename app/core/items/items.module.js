@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `core.items` module
-angular.module('core.items', ['ngResource']);
+angular.module('core.items', ['ngResource', 'angularUUID2']);

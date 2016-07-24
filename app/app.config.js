@@ -7,14 +7,31 @@
         function config($locationProvider, $routeProvider) {
           $locationProvider.hashPrefix('!');
           $routeProvider.
-            when('/phones', {
+            when('/items', {
               template: '<items-list></items-list>'
             }).
-            when('/phones/:phoneId', {
-              template: '<phone-detail></phone-detail>'
+            when('/items/favorites', {
+              template: '<favorites-modal></favorites-modal>'
             }).
-            otherwise('/phones');
+            otherwise('/items');
         }
-      ]);
+      // ]);
+    // config(['$stateProvider' ,'$urlRouterProvider',
+    //   function config($stateProvider, $urlRouterProvider) {
+    //       console.log("in config");
+    //     $stateProvider
+    //       .state('items', {
+    //         url: 'items',
+    //         template: '<items-list></items-list>'
+    //       })
+    //       .state('items.favorites', {
+    //         url: 'items/favorites',
+    //         template: '<favorites-modal></favorites-modal>'
+    //       });
+    //
+    //     $urlRouterProvider.otherwise('/items');
+    //
+    //   }
+    ]);
 
 })();
