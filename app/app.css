@@ -8,17 +8,17 @@ h1 {
 }
 
 /* View: Phone list */
-.phones {
+.items {
   list-style: none;
 }
 
-.phones li {
+.items li {
   clear: both;
   height: 205px;
 }
 
 @media (min-width: 767px) {
-  .phones li {
+  .items li {
     height: 253px;
   }
 }
@@ -31,7 +31,7 @@ h1 {
   width: 100px;
 }
 
-.phones .thumbnail {
+.items .thumbnail {
   position: relative;
   overflow: hidden;
 }
@@ -89,7 +89,7 @@ h1 {
   height: 140px;
 }
 
-.thumbnail .favorite {
+.thumbnail .corner-icon {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -97,10 +97,21 @@ h1 {
   height: 26px;
 }
 
+.thumbnail .icon-trash {
+  background-image: url('/assets/button_cancel.png');
+  width: 35px;
+  height: 35px;
+}
+
 .favorite-on {
-  background-image: url('/img/full_heart.png');
+  background-image: url('/assets/full_heart.png');
 }
 
 .favorite-off {
-  background-image: url('/img/empty_heart.png');
+  background-image: url('/assets/empty_heart.png');
+}
+
+.modal .modal-content {
+  width: 65%;
+  margin: auto;
 }

@@ -17,7 +17,7 @@ function ItemsListController($log, $scope, ItemsService, ModalService) {
 
   $scope.showFavorites = function () {
     $log.debug('show favorites');
-    ItemsService.syncItems($scope.items);
+    ItemsService.syncFavorites($scope.items);
     ModalService.showModal({
       templateUrl: 'favorites-modal/favorites-modal.template.html',
       controller: 'FavoritesModalController'

@@ -1,16 +1,13 @@
 {
-  "name": "angular-phonecat",
-  "description": "A starter project for AngularJS",
+  "name": "Item Manager",
+  "description": "A basic Item Manager for Wallapop",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.5.x",
     "angular-animate": "1.5.x",
     "angular-mocks": "1.5.x",
     "angular-resource": "1.5.x",
-    "angular-route": "1.5.x",
     "bootstrap": "3.3.x",
     "jquery": "2.2.x",
     "angularUtils-pagination": "angular-utils-pagination#^0.11.1",

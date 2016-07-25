@@ -8,7 +8,7 @@ function ItemsService($resource, $log, uuid2) {
   var items = [];
   return {
     getItems: function (callback) {
-
+      callback = callback && typeof callback === 'function' ? callback : angular.noop;
       if (items.length > 0) {
         $log.debug('retrieving items');
         return callback(items);
@@ -40,11 +40,18 @@ function ItemsService($resource, $log, uuid2) {
       return callback(filterFavorites(items));
     },
 
-    syncItems: function (updatedItems) {
+    syncFavorites: function (updatedItems) {
 
       $log.debug('syncing items');
       $log.debug(updatedItems);
       items = updatedItems;
+    },
+
+    unFavorite: function (id) {
+      var index = items.map(function(item) {
+        return item.id;
+      }).indexOf(id);
+      items[index].favorite = false;
     }
   }
 }

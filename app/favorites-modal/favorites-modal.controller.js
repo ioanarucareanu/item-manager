@@ -7,9 +7,18 @@ angular.
 
 function FavoritesModalController($log, $scope, ItemsService) {
     $log.debug('in Favorites Controller');
+    $scope.items = [];
     ItemsService.getFavorites(function(data) {
-        $log.debug('callback getFavorites');
         $scope.items = data;
         $log.debug($scope.items);
     });
+
+    $scope.unFavorite = function (id) {
+        $log.debug('unfavoriting ' + id);
+        ItemsService.unFavorite(id);
+        var index = $scope.items.map(function(item) {
+            return item.id;
+        }).indexOf(id);
+        $scope.items.splice(index, 1);
+    }
 }
