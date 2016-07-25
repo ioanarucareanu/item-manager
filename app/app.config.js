@@ -3,9 +3,9 @@
 (function () {
     angular.
       module('itemManager').
-        config(['$stateProvider' ,'$urlRouterProvider',
-          function config($stateProvider, $urlRouterProvider) {
-            console.log('in config');
+        config(['$stateProvider' ,'$urlRouterProvider', '$logProvider',
+          function config($stateProvider, $urlRouterProvider, $logProvider) {
+            $logProvider.debugEnabled(false);
             $stateProvider
               .state('items', {
                 url: '/items',

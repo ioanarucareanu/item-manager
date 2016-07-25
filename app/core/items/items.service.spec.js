@@ -53,23 +53,26 @@
 
     it('should return as favorites all the items with `favorite` false', function () {
 
-      //Set some favorite flags. They will be used for the following tests as well.
-      itemsData.items[0].favorite = true;
-      itemsData.items[1].favorite = false;
-      itemsData.items[2].favorite = true;
+      ItemsService.getItems(function (data) {
+        //Set some favorite flags. 
+        itemsData.items[0].id = data[0].id;
+        itemsData.items[0].favorite = true;
+        itemsData.items[1].id = data[1].id;
+        itemsData.items[1].favorite = false;
+        itemsData.items[2].id = data[2].id;
+        itemsData.items[2].favorite = true;
 
-      ItemsService.getItems();
-      $httpBackend.flush();
+        ItemsService.syncFavorites(itemsData.items);
 
-      ItemsService.syncFavorites(itemsData.items);
+        ItemsService.getFavorites(function (items) {
+          expect(items.length).toBe(2);
+          expect(items[0].id).toBe(itemsData.items[0].id);
+          expect(items[1].id).toBe(itemsData.items[2].id);
+        });
 
-      ItemsService.getFavorites(function (items) {
-        expect(items.length).toBe(2);
-        expect(items[0].id).toBe(itemsData.items[0].id);
-        expect(items[1].id).toBe(itemsData.items[2].id);
       });
+      $httpBackend.flush();
     });
-
 
   });
 })();
