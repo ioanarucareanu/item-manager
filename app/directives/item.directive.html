@@ -7,8 +7,8 @@
     <!-- end phone design -->
 
     <div class='title'>{{title}}</div>
-    <div class='byline'>
-        <div class='date'>{{price}}</div>
+    <div class='byline' ng-show='price'>
+        <div class='date'>{{price | currency : "€"}}</div>
     </div>
     <div class='description'>
 
@@ -17,5 +17,8 @@
         <br /> <br />
         <h9></h9>
     </div>
+        <div class='email' ng-show='email'>
+            {{email}}
+        </div>
     </div>
 </div>

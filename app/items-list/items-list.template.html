@@ -1,17 +1,7 @@
-<!--<p>Items List Template</p>-->
-
-<!--{{test}}-->
-
-<!--<button style="font-size:2.0em;" class="glyphicon glyphicon-th-list" ng-click="showFavorites()">-->
-
-<!--</button>-->
-
 <div class="container">
     <div class="row">
         <div class="col-xs-6">
             <div class="pull-left">
-                <!--Sidebar content-->
-
                 <p>
                     Search:
                     <input ng-model="query" />
@@ -44,7 +34,9 @@
                               description="item.description"
                               price="item.price"
                               email="item.email"
-                              image="item.image"></item-row>
+                              image="item.image">
+
+                    </item-row>
                     <span class="corner-icon media-right" ng-class="item.favorite ? 'favorite-on' : 'favorite-off'" ng-click="toggle(item.id)"></span>
                 </li>
             </ul>

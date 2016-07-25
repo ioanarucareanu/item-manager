@@ -7,19 +7,18 @@ h1 {
   margin-top: 0;
 }
 
-/* View: Phone list */
 .items {
   list-style: none;
 }
 
 .items li {
   clear: both;
-  height: 205px;
+  height: 245px;
 }
 
 @media (min-width: 767px) {
   .items li {
-    height: 253px;
+    height: 240px;
   }
 }
 
@@ -34,9 +33,8 @@ h1 {
 .items .thumbnail {
   position: relative;
   overflow: hidden;
+  padding-right: 40px;
 }
-
-/* Thumbnail content */
 
 .itemBoxContainer {
   overflow: hidden;
@@ -49,7 +47,7 @@ h1 {
 }
 
 .itembox {
-  padding: 30px 0;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -60,7 +58,7 @@ h1 {
 }
 
 .itembox .byline {
-  color: #999;
+  color: #22C5B1;
   font-size: 0.9em;
 }
 
@@ -82,8 +80,6 @@ h1 {
   }
 }
 
-/* End thumbnail content */
-
 .item-image {
   width: 140px;
   height: 140px;
@@ -95,6 +91,13 @@ h1 {
   right: 10px;
   width: 30px;
   height: 26px;
+}
+
+.thumbnail .email {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #999;
 }
 
 .thumbnail .icon-trash {
@@ -112,6 +115,6 @@ h1 {
 }
 
 .modal .modal-content {
-  width: 65%;
+  width: 75%;
   margin: auto;
 }
