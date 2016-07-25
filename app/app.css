@@ -14,7 +14,13 @@ h1 {
 
 .phones li {
   clear: both;
-  height: 150px;
+  height: 205px;
+}
+
+@media (min-width: 767px) {
+  .phones li {
+    height: 253px;
+  }
 }
 
 .thumb {
@@ -27,6 +33,7 @@ h1 {
 
 .phones .thumbnail {
   position: relative;
+  overflow: hidden;
 }
 
 /* Thumbnail content */
@@ -50,7 +57,6 @@ h1 {
   font-size: 22px;
   color: #222;
   text-align: left;
-  margin-bottom: 10px;
 }
 
 .itembox .byline {
@@ -60,7 +66,7 @@ h1 {
 
 .itembox .image {
   float: left;
-  margin: 0 20px 20px 0;
+  margin: 10px 20px 20px 0;
   position: relative;
   z-index: 1;
 }
