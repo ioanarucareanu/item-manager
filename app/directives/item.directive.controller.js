@@ -1,28 +1,30 @@
 'use strict';
 
-angular.module('itemsDirectives').
-    directive('itemRow', ['$log', itemRow]);
+(function () {
 
-function itemRow($log) {
-    var directive = {
-        restrict: 'EA',
-        scope: {
-            id: '=',
-            title: '=',
-            description: '=',
-            price: '=',
-            email: '=',
-            image: '=',
-            favorite: '='
-        },
+    angular.module('itemsDirectives').directive('itemRow', ['$log', itemRow]);
 
-        templateUrl: 'directives/item.directive.html',
-        controller: ['$log', ItemRowDirectiveController]
-    };
+    function itemRow($log) {
+        var directive = {
+            restrict: 'EA',
+            scope: {
+                id: '=',
+                title: '=',
+                description: '=',
+                price: '=',
+                email: '=',
+                image: '=',
+                favorite: '='
+            },
 
-    return directive;
-}
+            templateUrl: 'directives/item.directive.html',
+            controller: ['$log', ItemRowDirectiveController]
+        };
 
-function ItemRowDirectiveController($log) {
-    $log.debug('in ItemRowDirectiveController');
-}
+        return directive;
+    }
+
+    function ItemRowDirectiveController($log) {
+        $log.debug('in ItemRowDirectiveController');
+    }
+})();

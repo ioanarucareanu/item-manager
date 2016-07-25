@@ -1,5 +1,7 @@
 'use strict';
 
-// Define the `core` module
+(function () {
 
-angular.module('core', ['core.items']);
+// Define the `core` module
+    angular.module('core', ['core.items']);
+})();

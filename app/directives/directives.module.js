@@ -1,2 +1,7 @@
-angular
-    .module('itemsDirectives',[]);
+'use strict';
+
+(function () {
+
+    angular
+        .module('itemsDirectives', []);
+})();
